@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="fansite.css">
+    <title>Actualités - Maître Gims Fan Club</title>
+</head>
+<body>
+    <header>
+        <!-- Navigation -->
+        <nav>
+            <ul>
+                <li><a href="fansite.html">Accueil</a></li>
+                <li><a href="actualites.html">Actualités</a></li>
+                <li><a href="realisations.html">Réalisations</a></li>
+                <li><a href="evenements.html">Événements</a></li>
+                <li><a href="photos_videos.html">Photos et Vidéos</a></li>
+                <li><a href="liens_fans.html">Liens de Fans</a></li>
+                <li><a href="contactMG.html">Contact</a></li>
+            </ul>
+        </nav>
+        <img src="images/Maître Gims logo.jpg" alt="Logo du Fan Club">
+    </header>
+
+    <section id="actualites">
+        <h2>Dernières Actualités</h2>           
+        <!-- Article 1 -->
+        <article>
+            <h3>REPORT DE LA TOURNÉE</h3>
+            <p>Date de publication : 25 Mai 2023</p>
+            <p>La nouvelle est tombée, la nouvelle tournée de GIMS intitulée 
+                « LE DERNIER TOUR » est reporté dans toute 
+                la France pour NOVEMBRE 2024 et FEVRIER 2025. 
+                Les billets pour les concerts reportés restent évidemment valables..</p>
+                <img src="images/MG Tourné.jpg" alt="Illustration Article 1">
+        </article>
+
+        <!-- Article 2 -->
+        <article>
+            <h3>Une vidéo de Maitre Gims montre l'artiste au Maroc, en pleine distribution de vivres.</h3>
+            <p>Date de publication : 14 Septembre 2023</p>
+            <p>Cinq jours après le séisme dévastateur au Maroc, 
+                qui a tué 2946 personnes et fait 5674 blessés, 
+                les secouristes continuent leur travail acharné et la communauté internationale de se mobiliser.</p>
+            <button onclick="ouvrirModal('modal1')">Lire la suite</button>
+            <br>
+            <img src="images/MG Maroc.jpeg" alt="Illustration Article 2">
+        </article>
+
+        <!-- Ajoutez autant d'articles que nécessaire -->
+
+        <!-- Fenêtre modale -->
+       <div id="modal1" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="fermerModal('modal1')">&times;</span>
+        <h2>Une vidéo de Maitre Gims montre l'artiste au Maroc</h2>
+        <p>Cinq jours après le séisme dévastateur au Maroc, 
+            qui a tué 2946 personnes et fait 5674 blessés, 
+            les secouristes continuent leur travail acharné et la communauté internationale de se mobiliser. Pendant ce temps, des stars du monde entier lancent des appels à la solidarité. Parmi eux, des fausses rumeurs ont été lancées, comme celle de l’hôtel de Christiano Ronaldo à Marrakech, qui aurait accueilli des sinistrés. Si le footballeur a été traité un temps en héros, il s'agissait en fait d'une incompréhension tirée du journal espagnol Marca.</p>
+        <button onclick="fermerModal('modal1')">Fermer</button>
+    </div>
+</div>
+    </section>
+    
+    <footer>
+        <!-- Pied de page -->
+        <p><a href="https://www.instagram.com/gims/?hl=fr">Instagram</a> &copy; Maître Gims Fan Club 2023 - Tous droits réservés <a href="https://twitter.com/gims?lang=fr">Twitter</a></p>
+    </footer>
+
+    <!-- ... Autre contenu HTML ... -->
+
+<script>
+function ouvrirModal(modalId) {
+    var modal = document.getElementById(modalId);
+    modal.style.display = "block";
+}
+
+function fermerModal(modalId) {
+    var modal = document.getElementById(modalId);
+    modal.style.display = "none";
+}
+
+// Ferme la modal si l'utilisateur clique en dehors du contenu
+window.onclick = function (event) {
+    var modals = document.getElementsByClassName('modal');
+    for (var i = 0; i < modals.length; i++) {
+        var modal = modals[i];
+        if (event.target == modal) {
+            fermerModal(modal.id);
+        }
+    }
+}
+
+</script>
+
+<!-- ... Autre contenu HTML ... -->
+
+
+</body>
+</html>
